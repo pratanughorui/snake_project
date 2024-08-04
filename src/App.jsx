@@ -258,113 +258,108 @@ function App() {
   return (
     <>
       <div>
-      {/* <CustomAlert message={alertMessage} onClose={closeAlert} /> */}
-      <div className="flex flex-col items-center">
-        <div>
-        <h2 className="text-center">Select the correct cards and place them in the correct sequence</h2>
-        <div className="flex justify-center items-center  mt-7">
-          
-        <div className="relative w-64 h-80 flex justify-center items-center ml-40">
-      <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500" style={{ top: '0px', left: '0px', zIndex: 0 }}></div>
-      <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 md:top-4 md:left-4 lg:top-6 lg:left-6 xl:top-8 xl:left-8" style={{ top: '20px', left: '10px', zIndex: 1 }}></div>
-      <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 md:top-8 md:left-8 lg:top-12 lg:left-12 xl:top-16 xl:left-16" style={{ top: '40px', left: '20px', zIndex: 2 }}></div>
-      <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 md:top-12 md:left-12 lg:top-18 lg:left-18 xl:top-24 xl:left-24" style={{ top: '60px', left: '30px', zIndex: 3 }}></div>
-      <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 md:top-16 md:left-16 lg:top-24 lg:left-24 xl:top-32 xl:left-32" style={{ top: '80px', left: '40px', zIndex: 4 }} onClick={historyfun}>
-        <p>{his.text}</p>
+  {/* <CustomAlert message={alertMessage} onClose={closeAlert} /> */}
+  <div className="flex flex-col items-center">
+    <div>
+      <h2 className="text-center text-lg sm:text-xl md:text-2xl">
+        Select the correct cards and place them in the correct sequence
+      </h2>
+      <div className="flex flex-wrap justify-center items-center mt-7 space-y-4 sm:space-y-0 sm:space-x-4">
+        <div className="relative w-64 h-80 flex justify-center items-center">
+          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500" style={{ top: '0px', left: '0px', zIndex: 0 }}></div>
+          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-4 left-4" style={{ zIndex: 1 }}></div>
+          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-8 left-8" style={{ zIndex: 2 }}></div>
+          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-12 left-12" style={{ zIndex: 3 }}></div>
+          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-16 left-16" style={{ zIndex: 4 }} onClick={historyfun}>
+            <p>{his.text}</p>
+          </div>
+        </div>
+        <div className="relative w-64 h-80 flex justify-center items-center">
+          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500" style={{ top: '0px', left: '0px', zIndex: 0 }}></div>
+          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-4 left-4" style={{ zIndex: 1 }}></div>
+          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-8 left-8" style={{ zIndex: 2 }}></div>
+          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-12 left-12" style={{ zIndex: 3 }}></div>
+          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-16 left-16" style={{ zIndex: 4 }} onClick={examfun}>
+            <p>{exam.text}</p>
+          </div>
+        </div>
       </div>
     </div>
-          <div className="relative w-64 h-80 flex justify-center items-center ">
-            <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500" style={{ top: '0px', left: '0px', zIndex: 0 }}></div>
-            <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 md:top-4 md:left-4 lg:top-6 lg:left-6 xl:top-8 xl:left-8" style={{ top: '20px', left: '10px', zIndex: 1 }}></div>
-            <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 md:top-8 md:left-8 lg:top-12 lg:left-12 xl:top-16 xl:left-16" style={{ top: '40px', left: '20px', zIndex: 2 }}></div>
-            <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 md:top-12 md:left-12 lg:top-18 lg:left-18 xl:top-24 xl:left-24" style={{ top: '60px', left: '30px', zIndex: 3 }}></div>
-            <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 md:top-16 md:left-16 lg:top-24 lg:left-24 xl:top-32 xl:left-32" style={{ top: '80px', left: '40px', zIndex: 4 }}
-            onClick={examfun}
-            >
-               <p>{exam.text}</p>
-            </div>
-          </div>
-        </div>
-        </div>
-        
+  </div>
+  <div className="mt-8 text-2xl">
+    <div>
+      <h2 className="text-center">Choose the correct sequence</h2>
+    </div>
+    <div className="flex flex-wrap justify-center gap-4 sm:gap-12 mt-8">
+      <div className="border-2 border-lime-400 w-48 h-40 sm:w-64" onClick={res1}>
+        <p>{box1.text}</p>
       </div>
-      <div className='mt-8 text-2xl'>
-          <div>
-            <h2 className='text-center'>Choose the correct sequence</h2>
-          </div>
-          <div className='ml-28'>
-            <div className='flex justify-center justify-items-center gap-12 mt-8'>
-               <div className='border-2 border-lime-400 w-64 h-40'
-               onClick={res1}
-               >
-                <p>{box1.text}</p>
-               </div>
-               <div className='border-2 border-lime-400 w-64 h-40'
-               onClick={res2}
-               >
-                <p>{box2.text}</p>
-               </div>
-            </div>
-            <div className='flex justify-center justify-items-center gap-12 mt-8'>
-               <div className='border-2 border-lime-400 w-64 h-40'
-               onClick={res3}
-               >
-                <p>{box3.text}</p>
-               </div>
-               <div className='border-2 border-lime-400 w-64 h-40'
-               onClick={res4}
-               >
-                <p>{box4.text}</p>
-               </div>
-            </div>
-          </div>
-
-
-
-        </div>
-        {alertVisible && (
-          <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h2 className="text-xl font-bold mb-4 text-green-600">Success!</h2>
-              <p className="text-lg">You have selected the correct sequence!</p>
-              <button
-                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-                onClick={() =>{setAlertVisible(false);window.location.reload();}}
-              >
-                OK
-              </button>
-            </div>
-          </div>
-        )}
-        {alertwrongVisible && (
-          <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h2 className="text-xl font-bold mb-4 text-red-600">Wrong!</h2>
-              <p className="text-lg">You have selected the Wrong sequence!</p>
-              <button
-                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-                onClick={() =>{setAlertVisible(false);window.location.reload();}}
-              >
-                play again
-              </button>
-            </div>
-          </div>
-        )}
-        {abc && (
-          <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h2 className="text-xl font-bold mb-4 text-red-600">alert</h2>
-              <p className="text-lg">maximum 3 card can seleted</p>
-              <button
-                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-                onClick={() =>{setAbc(false);}}
-              >
-                close
-              </button>
-            </div>
-          </div>
-        )}
+      <div className="border-2 border-lime-400 w-48 h-40 sm:w-64" onClick={res2}>
+        <p>{box2.text}</p>
       </div>
+    </div>
+    <div className="flex flex-wrap justify-center gap-4 sm:gap-12 mt-8">
+      <div className="border-2 border-lime-400 w-48 h-40 sm:w-64" onClick={res3}>
+        <p>{box3.text}</p>
+      </div>
+      <div className="border-2 border-lime-400 w-48 h-40 sm:w-64" onClick={res4}>
+        <p>{box4.text}</p>
+      </div>
+    </div>
+  </div>
+
+  {alertVisible && (
+    <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
+      <div className="bg-white p-6 rounded-lg shadow-lg">
+        <h2 className="text-xl font-bold mb-4 text-green-600">Success!</h2>
+        <p className="text-lg">You have selected the correct sequence!</p>
+        <button
+          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+          onClick={() => {
+            setAlertVisible(false);
+            window.location.reload();
+          }}
+        >
+          OK
+        </button>
+      </div>
+    </div>
+  )}
+  {alertwrongVisible && (
+    <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
+      <div className="bg-white p-6 rounded-lg shadow-lg">
+        <h2 className="text-xl font-bold mb-4 text-red-600">Wrong!</h2>
+        <p className="text-lg">You have selected the Wrong sequence!</p>
+        <button
+          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+          onClick={() => {
+            setAlertVisible(false);
+            window.location.reload();
+          }}
+        >
+          play again
+        </button>
+      </div>
+    </div>
+  )}
+  {abc && (
+    <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
+      <div className="bg-white p-6 rounded-lg shadow-lg">
+        <h2 className="text-xl font-bold mb-4 text-red-600">alert</h2>
+        <p className="text-lg">maximum 3 card can seleted</p>
+        <button
+          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+          onClick={() => {
+            setAbc(false);
+          }}
+        >
+          close
+        </button>
+      </div>
+    </div>
+  )}
+</div>
+
     </>
   );
 }
