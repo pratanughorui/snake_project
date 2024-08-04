@@ -264,7 +264,7 @@ function App() {
         <h2 className="text-center text-2xl">Select the correct cards and place them in the correct sequence</h2>
         <div className="flex justify-center items-center  mt-7">
           
-        <div className="relative w-64 h-80 flex justify-center items-center ml-32">
+        <div className="relative w-64 h-80 flex justify-center items-center ml-40">
       <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500" style={{ top: '0px', left: '0px', zIndex: 0 }}></div>
       <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 md:top-4 md:left-4 lg:top-6 lg:left-6 xl:top-8 xl:left-8" style={{ top: '20px', left: '10px', zIndex: 1 }}></div>
       <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 md:top-8 md:left-8 lg:top-12 lg:left-12 xl:top-16 xl:left-16" style={{ top: '40px', left: '20px', zIndex: 2 }}></div>
