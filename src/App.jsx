@@ -261,49 +261,49 @@ function App() {
   {/* <CustomAlert message={alertMessage} onClose={closeAlert} /> */}
   <div className="flex flex-col items-center">
     <div>
-      <h2 className="text-center text-lg sm:text-xl md:text-2xl">
+      <h2 className="text-center text-base sm:text-lg md:text-xl">
         Select the correct cards and place them in the correct sequence
       </h2>
-      <div className="flex flex-wrap justify-center items-center mt-7 space-y-4 sm:space-y-0 sm:space-x-4">
-        <div className="relative w-64 h-80 flex justify-center items-center">
-          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500" style={{ top: '0px', left: '0px', zIndex: 0 }}></div>
-          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-4 left-4" style={{ zIndex: 1 }}></div>
-          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-8 left-8" style={{ zIndex: 2 }}></div>
-          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-12 left-12" style={{ zIndex: 3 }}></div>
-          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-16 left-16" style={{ zIndex: 4 }} onClick={historyfun}>
-            <p>{his.text}</p>
+      <div className="flex flex-wrap justify-center items-center mt-4 sm:mt-7 space-y-4 sm:space-y-0 sm:space-x-4">
+        <div className="relative w-40 h-48 sm:w-64 sm:h-80 flex justify-center items-center">
+          <div className="absolute w-24 h-28 sm:w-40 sm:h-48 bg-blue-200 border border-blue-500" style={{ top: '0px', left: '0px', zIndex: 0 }}></div>
+          <div className="absolute w-24 h-28 sm:w-40 sm:h-48 bg-blue-200 border border-blue-500 top-2 left-2 sm:top-4 sm:left-4" style={{ zIndex: 1 }}></div>
+          <div className="absolute w-24 h-28 sm:w-40 sm:h-48 bg-blue-200 border border-blue-500 top-4 left-4 sm:top-8 sm:left-8" style={{ zIndex: 2 }}></div>
+          <div className="absolute w-24 h-28 sm:w-40 sm:h-48 bg-blue-200 border border-blue-500 top-6 left-6 sm:top-12 sm:left-12" style={{ zIndex: 3 }}></div>
+          <div className="absolute w-24 h-28 sm:w-40 sm:h-48 bg-blue-200 border border-blue-500 top-8 left-8 sm:top-16 sm:left-16" style={{ zIndex: 4 }} onClick={historyfun}>
+            <p className="text-xs sm:text-sm">{his.text}</p>
           </div>
         </div>
-        <div className="relative w-64 h-80 flex justify-center items-center">
-          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500" style={{ top: '0px', left: '0px', zIndex: 0 }}></div>
-          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-4 left-4" style={{ zIndex: 1 }}></div>
-          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-8 left-8" style={{ zIndex: 2 }}></div>
-          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-12 left-12" style={{ zIndex: 3 }}></div>
-          <div className="absolute w-40 h-48 bg-blue-200 border border-blue-500 top-16 left-16" style={{ zIndex: 4 }} onClick={examfun}>
-            <p>{exam.text}</p>
+        <div className="relative w-40 h-48 sm:w-64 sm:h-80 flex justify-center items-center">
+          <div className="absolute w-24 h-28 sm:w-40 sm:h-48 bg-blue-200 border border-blue-500" style={{ top: '0px', left: '0px', zIndex: 0 }}></div>
+          <div className="absolute w-24 h-28 sm:w-40 sm:h-48 bg-blue-200 border border-blue-500 top-2 left-2 sm:top-4 sm:left-4" style={{ zIndex: 1 }}></div>
+          <div className="absolute w-24 h-28 sm:w-40 sm:h-48 bg-blue-200 border border-blue-500 top-4 left-4 sm:top-8 sm:left-8" style={{ zIndex: 2 }}></div>
+          <div className="absolute w-24 h-28 sm:w-40 sm:h-48 bg-blue-200 border border-blue-500 top-6 left-6 sm:top-12 sm:left-12" style={{ zIndex: 3 }}></div>
+          <div className="absolute w-24 h-28 sm:w-40 sm:h-48 bg-blue-200 border border-blue-500 top-8 left-8 sm:top-16 sm:left-16" style={{ zIndex: 4 }} onClick={examfun}>
+            <p className="text-xs sm:text-sm">{exam.text}</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div className="mt-8 text-2xl">
+  <div className="mt-8 text-xl sm:text-2xl">
     <div>
-      <h2 className="text-center">Choose the correct sequence</h2>
+      <h2 className="text-center text-base sm:text-lg md:text-xl">Choose the correct sequence</h2>
     </div>
-    <div className="flex flex-wrap justify-center gap-4 sm:gap-12 mt-8">
-      <div className="border-2 border-lime-400 w-48 h-40 sm:w-64" onClick={res1}>
-        <p>{box1.text}</p>
+    <div className="flex flex-wrap justify-center gap-4 sm:gap-12 mt-4 sm:mt-8">
+      <div className="border-2 border-lime-400 w-40 h-24 sm:w-64 sm:h-40" onClick={res1}>
+        <p className="text-xs sm:text-sm">{box1.text}</p>
       </div>
-      <div className="border-2 border-lime-400 w-48 h-40 sm:w-64" onClick={res2}>
-        <p>{box2.text}</p>
+      <div className="border-2 border-lime-400 w-40 h-24 sm:w-64 sm:h-40" onClick={res2}>
+        <p className="text-xs sm:text-sm">{box2.text}</p>
       </div>
     </div>
-    <div className="flex flex-wrap justify-center gap-4 sm:gap-12 mt-8">
-      <div className="border-2 border-lime-400 w-48 h-40 sm:w-64" onClick={res3}>
-        <p>{box3.text}</p>
+    <div className="flex flex-wrap justify-center gap-4 sm:gap-12 mt-4 sm:mt-8">
+      <div className="border-2 border-lime-400 w-40 h-24 sm:w-64 sm:h-40" onClick={res3}>
+        <p className="text-xs sm:text-sm">{box3.text}</p>
       </div>
-      <div className="border-2 border-lime-400 w-48 h-40 sm:w-64" onClick={res4}>
-        <p>{box4.text}</p>
+      <div className="border-2 border-lime-400 w-40 h-24 sm:w-64 sm:h-40" onClick={res4}>
+        <p className="text-xs sm:text-sm">{box4.text}</p>
       </div>
     </div>
   </div>
@@ -359,6 +359,7 @@ function App() {
     </div>
   )}
 </div>
+
 
     </>
   );
