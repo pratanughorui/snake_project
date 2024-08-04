@@ -84,122 +84,135 @@ function App() {
     setExam(getRandomexamObject());
   }
   const res1=()=>{
-    let a=0;
-   if(hisTrigger){
-    if(conditionforhis(his)){
-      setAbc(true)
-      
-      return;
-    }
-      setBox1(his);
-      historyfun();
-      a=1;
-   }else{
-    if(conditionforexam(exam)){
-      setAbc(true)
-      return;
-    }
-    setBox1(exam);
-    a=2;
-   }
-   setsc(sc+1);
-   if(sc>=3){
-    if(a==1){
-      checkrules(his,box2,box3,box4);
-    }else{
-      
-      checkrules(exam,box2,box3,box4);
-    }
-    
-   }
-   
-  }
-  const res2=()=>{
+    if (his && Object.keys(his).length > 0 || exam && Object.keys(exam).length > 0) {
+          
     let a=0;
     if(hisTrigger){
-      if(conditionforhis(his)){
-        setAbc(true)
-        return;
-      }
-       setBox2(his);
+     if(conditionforhis(his)){
+       setAbc(true)
+       
+       return;
+     }
+       setBox1(his);
        historyfun();
        a=1;
     }else{
-      if(conditionforexam(exam)){
-        setAbc(true)
-        return;
-      }
-     setBox2(exam);
+     if(conditionforexam(exam)){
+       setAbc(true)
+       return;
+     }
+     setBox1(exam);
      a=2;
     }
     setsc(sc+1);
     if(sc>=3){
      if(a==1){
-       checkrules(box1,his,box3,box4);
+       checkrules(his,box2,box3,box4);
      }else{
-       checkrules(box1,exam,box3,box4);
+       
+       checkrules(exam,box2,box3,box4);
      }
+     
     }
+    } 
+   
+  }
+  const res2=()=>{  
+    if (his && Object.keys(his).length > 0 || exam && Object.keys(exam).length > 0) {
+
+      let a=0;
+      if(hisTrigger){
+        if(conditionforhis(his)){
+          setAbc(true)
+          return;
+        }
+         setBox2(his);
+         historyfun();
+         a=1;
+      }else{
+        if(conditionforexam(exam)){
+          setAbc(true)
+          return;
+        }
+       setBox2(exam);
+       a=2;
+      }
+      setsc(sc+1);
+      if(sc>=3){
+       if(a==1){
+         checkrules(box1,his,box3,box4);
+       }else{
+         checkrules(box1,exam,box3,box4);
+       }
+      }
+    }
+    
   }
   const res3=()=>{
-    let a=0;
-   if(hisTrigger){
-    if(conditionforhis(his)){
-      setAbc(true)
-      return;
+    if (his && Object.keys(his).length > 0 || exam && Object.keys(exam).length > 0) {
+      let a=0;
+      if(hisTrigger){
+       if(conditionforhis(his)){
+         setAbc(true)
+         return;
+       }
+         setBox3(his);
+         historyfun();
+         a=1;
+      }else{
+       if(conditionforexam(exam)){
+         setAbc(true)
+         return;
+       }
+       setBox3(exam);
+       a=2;
+      }
+      setsc(sc+1);
+      if(sc>=3){
+       if(a==1){
+         checkrules(box1,box2,his,box4);
+       }else{
+         checkrules(box1,box2,exam,box4);
+       }
+     }
     }
-      setBox3(his);
-      historyfun();
-      a=1;
-   }else{
-    if(conditionforexam(exam)){
-      setAbc(true)
-      return;
-    }
-    setBox3(exam);
-    a=2;
-   }
-   setsc(sc+1);
-   if(sc>=3){
-    if(a==1){
-      checkrules(box1,box2,his,box4);
-    }else{
-      checkrules(box1,box2,exam,box4);
-    }
-  }
+    
   }
   const res4=()=>{
-    let a=0;
-   if(hisTrigger){
-    if(conditionforhis(his)){
-      setAbc(true)
-      return;
+    if (his && Object.keys(his).length > 0 || exam && Object.keys(exam).length > 0) {
+      let a=0;
+      if(hisTrigger){
+       if(conditionforhis(his)){
+         setAbc(true)
+         return;
+       }
+         setBox4(his);
+         historyfun();
+         a=1;
+      }else{
+       if(conditionforexam(exam)){
+         setAbc(true)
+         return;
+       }
+       setBox4(exam);
+       a=2;
+      }
+      setsc(sc+1);
+      if(sc>=3){
+       if(a==1){
+         checkrules(box1,box2,box3,his);
+       }else{
+         checkrules(box1,box2,box3,exam);
+       }
+     }
     }
-      setBox4(his);
-      historyfun();
-      a=1;
-   }else{
-    if(conditionforexam(exam)){
-      setAbc(true)
-      return;
-    }
-    setBox4(exam);
-    a=2;
-   }
-   setsc(sc+1);
-   if(sc>=3){
-    if(a==1){
-      checkrules(box1,box2,box3,his);
-    }else{
-      checkrules(box1,box2,box3,exam);
-    }
-  }
+   
   }
   const checkrules=(box1,box2,box3,box4)=>{
        if(sc>=3){
        // console.log('ggg');
          if(box1.type=='history' && box2.type=='history' && box3.type=='history' && box4.type=='history'){
-          console.log('fdff');
+         // console.log('fdff');
           setAbc(true)
           return;
          }
@@ -236,7 +249,7 @@ function App() {
         }
    }
    const conditionforexam=(curr)=>{
-    console.log(curr);
+   // console.log(curr);
         if((box1?.type=='exam' && box2?.type=='exam' && box3?.type=='exam') && curr.type=='exam'){
           return true;
         }
