@@ -294,24 +294,24 @@ function App() {
           </div>
           <div className='ml-28'>
             <div className='flex justify-center justify-items-center gap-12 mt-8'>
-               <div className='border-2 border-lime-400 w-52 h-52'
+               <div className='border-2 border-lime-400 w-64 h-40'
                onClick={res1}
                >
                 <p>{box1.text}</p>
                </div>
-               <div className='border-2 border-lime-400 w-52 h-52'
+               <div className='border-2 border-lime-400 w-64 h-40'
                onClick={res2}
                >
                 <p>{box2.text}</p>
                </div>
             </div>
             <div className='flex justify-center justify-items-center gap-12 mt-8'>
-               <div className='border-2 border-lime-400 w-52 h-52'
+               <div className='border-2 border-lime-400 w-64 h-40'
                onClick={res3}
                >
                 <p>{box3.text}</p>
                </div>
-               <div className='border-2 border-lime-400 w-52 h-52'
+               <div className='border-2 border-lime-400 w-64 h-40'
                onClick={res4}
                >
                 <p>{box4.text}</p>
